@@ -16,8 +16,8 @@ public class Main {
 			
 			if(option == 'n'){
 	            board.updateBoard();
-	            board.print();
-	            oldBoard.print();
+	            oldBoard.print("Tabuleiro Antigo");
+	            board.print("Tabuleiro Novo");
 			}
 		}
 		while(option == 'n');
