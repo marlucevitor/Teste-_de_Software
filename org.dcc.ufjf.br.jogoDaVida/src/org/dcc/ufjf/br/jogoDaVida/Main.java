@@ -5,9 +5,13 @@ import javax.swing.JOptionPane;
 public class Main {
 
 	public static void main(String[] args) {
+		final int LENGTH = 6; 
+		Functions f = new Functions();
 		
-		Board board = new Board();
-		Board oldBoard = new Board(board);
+		boolean board[][] = f.createBoard();
+		boolean oldBoard[][] = new boolean [LENGTH][LENGTH]; 
+		f.copy(board, oldBoard);
+		
 		char option = 'n';
 
 		do {
@@ -15,12 +19,13 @@ public class Main {
 			option = choice.charAt(0);
 			
 			if(option == 'n'){
-	            board.updateBoard();
-	            oldBoard.print("Tabuleiro Antigo");
-	            board.print("Tabuleiro Novo");
+	            board = f.updateBoard(oldBoard);
+	            f.printBoard("Tabuleiro Antigo", oldBoard);
+	            f.printBoard("Tabuleiro Novo", board);
+	            	            
+	            f.copy(board, oldBoard);
 			}
 		}
 		while(option == 'n');
 	}
-
 }
