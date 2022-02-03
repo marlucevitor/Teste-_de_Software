@@ -47,4 +47,43 @@ public class jogoDaVidaTest {
 		Assert.assertArrayEquals(saidaEsperada, f.updateBoard(entrada));
 	}
 
+	/* ENTRADA
+	0 0 0 0 0 0  
+	0 1 1 1 0 0  
+	0 1 1 1 0 0  
+	0 1 1 1 0 0  
+	0 0 0 0 0 0  
+	0 0 0 0 0 0 
+	*/
+	/* SAÍDA ESPERADA
+	0 0 1 1 0 0  
+	0 0 0 0 0 0  
+	0 1 0 1 0 0  
+	0 1 0 0 0 0  
+	0 0 0 0 0 0  
+	0 0 0 0 0 0
+	*/
+	@Test
+	public void test2() {
+		Functions f = new Functions();
+		boolean[][] entrada = {
+			{false, false, false, false, false, false},
+			{false, true, true, true, false, false},
+			{false, true, true, true, false, false},
+			{false, true, true, true, false, false},
+			{false, false, false, false, false, false},
+			{false, false, false, false, false, false}
+		};
+		
+		boolean[][] saidaEsperada = {
+			{false, false, true, true, false, false},
+			{false, false, false, false, false, false},
+			{false, true, false, true, false, false},
+			{false, true, false, false, false, false},
+			{false, false, false, false, false, false},
+			{false, false, false, false, false, false}
+		};
+		
+		Assert.assertArrayEquals(saidaEsperada, f.updateBoard(entrada));
+	}
 }

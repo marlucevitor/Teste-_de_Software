@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		final int LENGTH = 6; 
 		Functions f = new Functions();
 		
@@ -27,5 +28,6 @@ public class Main {
 			}
 		}
 		while(option == 'n');
+		
 	}
 }
