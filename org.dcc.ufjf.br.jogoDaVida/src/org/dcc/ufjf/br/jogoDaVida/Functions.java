@@ -146,24 +146,26 @@ public class Functions {
 		return numberOfNeighboursAlive;
 	}
 
-	public boolean[][] createBoard() {
-		boolean board[][] = new boolean[LENGTH][LENGTH];
-		Random rd = new Random();
-		for (int i = 0; i < LENGTH; i++){
-			for(int j = 0; j < LENGTH; j++){
-				board[i][j] = rd.nextBoolean();
-			}
-		}
-		return board;
-	}
-	
-	public void printBoard(String s, boolean[][] board) {
-		System.out.println(s);
-		for (int row = 0; row < LENGTH; row++) {  
-			for (int col = 0; col < LENGTH; col++) { 
-				System.out.print((board[row][col]? 1 : 0) + " ");
-			}  
-			System.out.println(" ");
-		}  
-	}
+//	public boolean[][] createBoard() {
+//		boolean board[][] = new boolean[LENGTH][LENGTH];
+//		Random rd = new Random();
+//		for (int i = 0; i < LENGTH; i++){
+//			for(int j = 0; j < LENGTH; j++){
+//				board[i][j] = rd.nextBoolean();
+//			}
+//		}
+//		return board;
+//	}
+//	
+//	public void printBoard(String s, boolean[][] board) {
+//		System.out.println(s);
+//		for (int row = 0; row < LENGTH; row++) { 
+//			System.out.print("{");
+//			for (int col = 0; col < LENGTH; col++) { 
+//				//System.out.print((board[row][col]? 1 : 0) + " ");
+//				System.out.print(board[row][col] + (col == 5? "}," : ", ")); 
+//			}  
+//			System.out.println(" ");
+//		}  
+//	}
 }
